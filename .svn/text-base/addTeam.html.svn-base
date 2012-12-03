@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/register.js"></script>
+        <link rel="stylesheet" href="registration.css" type="text/css" media="all" />
+
+    </head>
+</head>
+<body>
+    <div id="header">
+        <h2>Add Team</h2>
+    </div>
+    <div id="form">
+        <form id="registrationForm" method="POST" >
+            <table>
+                <tr>
+                    <td><label for="firstname">Team Name<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="text" name="firstname" id ="firstname" /></td>
+                    <td><label id="firstnameMessage" class="errorMessage"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Password<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="text" name="lastname" id="lastname"/></td>
+                    <td><label id="lastnameMessage"class="errorMessage"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">Confirm password<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="password" name="confirm" id="confirmPassword"/></td>
+                    <td><label class="errorMessage" id="confirmPasswordMessage"></label></td>
+                </tr>
+            </table>
+            <div id="textareaDescription">
+                <label for="description">Description:</label>
+                <textarea rows="10" cols="30" id="description"> </textarea>
+            </div>
+            <div id="submitAddTeam" class="formSubmitAddTeam">
+                <input name="Submit" value="Submit" type="submit" onclick="validate(); return false;"/>
+            </div>
+            <div id="addMore" class="formAddMore">
+                <input name="Submit" value="Add More" type="submit"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

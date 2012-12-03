@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <title></title>
+    </head>
+    <body>
+        <div id="container">
+        <?php include_once 'header.php';?>
+        
+        <div id="content">
+            <div id="leftBar">
+                <img src="/images/mg.png" width="200" height="300" align="middle"/>
+            </div>
+        <div id="rightBar">
+            <br/><br/><h2>Login</h2>
+            <form>
+                leader
+                <input type="checkbox" value="Leader" />
+                member 
+                <input type="checkbox" value="Member" />
+                <br />
+                Email: <input type="text" name="email" />
+                <br />
+                Password: <input type="text" name="password" />
+                <br />
+                <input type="submit" value="Login" />
+                <br />
+                <input type="submit" value="Dont have an Account" />
+            </form>
+        </div>
+        
+        </div>
+        <?php include_once 'footer.php'; ?>
+        </div>
+    </body>
+</html>

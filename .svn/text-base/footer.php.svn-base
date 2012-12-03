@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+       <div id="footer">
+           <ul>
+               <li><a href="url" font ="bold" >Home </a></li>          
+               <li><a href="url" font ="bold">Profile</a></li>
+               <li><a href="url" font ="bold">ContactUs </a></li>
+           </ul>
+        </div>
+    </body>
+</html>

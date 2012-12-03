@@ -1,0 +1,108 @@
+var nodeChgArea;
+
+function addNode() {
+     var element = document.forms[0];
+     var clone = element.cloneNode(true);
+     clone.reset();
+     var allRows = clone.getElementsByTagName('tr');
+     var cLabel;
+     var j;
+     for(var i = 0;i<allRows.length;i++){
+        var cRow = allRows[i];
+        cLabel = cRow.getElementsByTagName('label');
+        for(j=0;j<cLabel.length;j++){
+            if(cLabel[j].getAttribute('name') == 'teamNameMessage'){
+                cLabel[j].innerHTML = '';
+            }
+            if(cLabel[j].getAttribute('name') == 'teamPasswordMessage'){
+                cLabel[j].innerHTML = '';
+            }
+            if(cLabel[j].getAttribute('name') == 'teamConfirmPasswordMessage'){
+                cLabel[j].innerHTML = '';
+            }
+        }
+     }
+     nodeChgArea = document.getElementById("modifiable");
+     nodeChgArea.appendChild(clone);
+}
+
+function validateForm(addTeamForm){
+    var k; var  j;
+    var cRow; var cInp; var cLabel;
+    var teamName; var password; var confirm;
+    var teamNameMessage; var passwordMessage; var confirmMessage;
+    var formPassedValidation = true;
+
+    var allRows = addTeamForm.getElementsByTagName('tr');//the rows' collection
+    for(var i = 0;i<allRows.length;i++){
+        cRow = allRows[i];
+        cInp = cRow.getElementsByTagName('input');//the inputs' collection of the ist row
+        for(k = 0;k<cInp.length;k++){
+            if(cInp[k].getAttribute('name') == 'teamName'){
+                teamName = cInp[k];
+            }
+            if(cInp[k].getAttribute('name') == 'teamPassword') {
+                password = cInp[k];
+            }
+            if(cInp[k].getAttribute('name') == 'teamConfirmPassword'){
+                confirm = cInp[k];
+            }
+        }
+        cLabel = cRow.getElementsByTagName('label');
+        for(j=0;j<cLabel.length;j++){
+            if(cLabel[j].getAttribute('name') == 'teamNameMessage'){
+                teamNameMessage = cLabel[j];
+            }
+            if(cLabel[j].getAttribute('name') == 'teamPasswordMessage'){
+                passwordMessage = cLabel[j];
+            }
+            if(cLabel[j].getAttribute('name') == 'teamConfirmPasswordMessage'){
+                confirmMessage = cLabel[j];
+            }
+        }
+    }
+    if (teamName.value == ''){
+        teamNameMessage.innerHTML = 'empty';
+        formPassedValidation = false;
+    }else {
+        teamNameMessage.innerHTML = '';
+    }
+    if (password.value == ''){
+        passwordMessage.innerHTML = 'empty';
+        formPassedValidation = false;
+    }else {
+        passwordMessage.innerHTML = '';
+    }
+    if (confirm.value == ''){
+        confirmMessage.innerHTML = 'empty';
+        formPassedValidation = false;
+    }else if (password.value != confirm.value ){
+        confirmMessage.innerHTML = 'doesnt match';
+        formPassedValidation = false;
+    }else {
+        confirmMessage.innerHTML = '';
+    }
+    return formPassedValidation;
+}
+
+function validateAll(){
+    var allFormsPassedValidation = true;
+    var forms = document.forms;
+    for(var j=0;j<forms.length;j++){
+        if (!validateForm(forms[j])){
+            allFormsPassedValidation = false;
+        }
+    }
+    return allFormsPassedValidation;
+}
+
+function submitAllForms(){
+    var forms = document.forms;
+    if (validateAll()){
+        //alert("all form passed");
+        for(var j=0;j<forms.length;j++){
+            forms[j].submit();
+        }
+    }
+}
+

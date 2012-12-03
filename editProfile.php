@@ -1,0 +1,68 @@
+<?php
+include_once 'header.php';
+include_once 'db/user.php';
+
+$user = User::current();
+?>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/master.css" />
+        <link href="css/style.css"	rel="stylesheet" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/header.js"></script>
+        <script type="text/javascript" src="js/tabs.js"></script>
+        <script type="text/javascript">
+            var selectedId = "#profile";
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <?php showHeader($user); ?>        
+            <div id="content">
+                <div id="middleBar">
+                    <br/><font size="4" face="cursive" color="blue" >Edit Profile</font>
+                    <br/><br/><br/><br/>
+                    <div class="htmltabs">
+                        <ul class="tabs">
+                            <li class="tab1">
+                                <a class="tab1 tab">
+                                    Personal	
+                                </a>
+                            </li>
+                            <li class="tab2">
+                                <a class="tab2 tab">
+                                    Team 
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab1 tabsContent">
+                            <form>
+                                First Name: <input type="text" name="first_name" />
+                                <br />
+                                Last Name: <input type="text" name="last_name" />
+                                <br />
+                                School: <input type="text" name="SID" />
+                                <br />
+                                Email: <input type="text" name="email" />
+                                <br />
+                                <input type="submit" value="Submit" />
+                            </form>
+
+                        </div>
+                        <div class="tab2 tabsContent">
+                            <form>
+                                Team: <input type="text" name="TID" />
+                                <input type="submit" value="Edit" />
+                                <input type="submit" value="Delete" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <?php include_once 'footer.php'; ?>
+        </div>
+    </div>
+</body>
+</html>

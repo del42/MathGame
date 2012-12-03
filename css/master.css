@@ -1,0 +1,145 @@
+body 
+{
+    background-color: #A4DCD1;
+
+}
+
+#container {
+    margin:auto;
+    height: 600px;
+    width: 800px; 
+    border-right-style: double;
+    border-left-style: double;
+    border-bottom-style: double;
+    border-top-style: double;
+    font-family: sans-serif;
+}
+
+#header {
+    position: relative;
+    padding-top: 50px;
+    height: 50px;
+    width: 800px;
+    background-color: #45C3B8;
+    color:  #5C5C5C;
+}
+
+#logo {
+    float: bottom;
+}
+
+
+#content 
+{
+    height: 475px;
+    width:800px;
+    background-color: #99CDC9;
+}
+
+#leftBar {
+    position: relative;
+    top: 2px;
+    float: left; 
+    height: 100%;
+    width: 395px; 
+    vertical-align: middle;
+    text-align: center;
+    direction: inherit;
+    background-color: #99CDC9;
+}
+
+#middleBar {
+    float:none;
+    height: 100%;
+    width: 600px;
+    background-color: #99CDC9;
+    text-align: left;
+    direction: inherit;
+    margin-left:100px ;
+} 
+
+#rightBar { 
+    position: relative;
+    float:right; 
+    height: 100%;
+    width: 395px;  
+    vertical-align: middle;
+    text-align: center;
+    direction: inherit;
+    background-color: #99CDC9;
+}
+
+
+#helpDescription {
+    position: absolute;
+}
+
+#startGame {
+    bottom: -230px;
+    position: relative;
+}
+
+ul.mainNavigate {
+    position: relative;
+    float: right;
+    bottom: -2px;
+    width: auto;
+    list-style: none;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 22px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    min-height: 30px;
+
+}
+
+.list {
+    display: inline;
+}
+
+.nav:link,.nav:visited
+{
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color: #00FFAA;
+    text-align:center;
+    padding:9px;
+    font-family: sans-serif;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: #808A87;
+    border: solid #174038;
+    border-bottom: none;
+    border-width: 2px;
+}
+
+.nav:hover,.nav:active
+{
+    background-color:#1B6453;
+}
+
+div.user {
+    position: relative;
+    float: right;
+    margin-top: -40px;
+    margin-right: 68px;
+    font-size: 14px;
+    color: blue;
+    font-family: sans-serif;
+}
+
+a.signout:link {
+    text-decoration:none;
+    color: red;
+}
+
+a.signout:hover {
+    color: yellow;
+}

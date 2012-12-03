@@ -1,0 +1,28 @@
+
+<html>
+    <title>MaThMaGic</title> 
+    <style type="text/css" media="all">@import "css/master.css";</style>
+    <div id="container">
+        <div id="header">
+            <br/><h1><font size="6" face="cursive" color="blue">MaThMaGic</font></h1>  
+        </div>
+        <div id="leftBar">
+            <img src="/images/mg.png" width="200" height="300" />
+        </div>
+        <div id="rightBar">
+            <br/><br/><h1>encoded strings...</h1>
+            <form>
+                statement: <input type="text" name="question" />
+                <br />
+                solution: <input type="text" name="solution" />
+                <br />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+        <div id="footer">
+            <a href="url" font ="bold" >Home__ </a>
+            <a href="url" font ="bold">Profile__ </a>
+            <a href="url" font ="bold">ContactUs__ </a>
+        </div>
+    </div>
+</html>s

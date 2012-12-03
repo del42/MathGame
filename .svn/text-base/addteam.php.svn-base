@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/master.css" />      
+        <link rel="stylesheet" href="registration.css" type="text/css" media="all" />
+        <script type="text/javascript" src="js/register.js"></script>
+        <title>Add Team</title>
+    </head>
+    <body>
+        <div id="container">
+        <?php include_once 'header.php';?>
+        
+        <div id="content">
+          
+            <div id="middleBar">
+                
+                <div id="form">
+        <form id="registrationForm" method="POST" >
+            <table>
+                <tr>
+                    <td><label for="firstname">Team Name<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="text" name="firstname" id ="firstname" /></td>
+                    <td><label id="firstnameMessage" class="errorMessage"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Password<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="text" name="lastname" id="lastname"/></td>
+                    <td><label id="lastnameMessage"class="errorMessage"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">Confirm password<span class="hightlighted">*</span>:</label></td>
+                    <td><input type="password" name="confirm" id="confirmPassword"/></td>
+                    <td><label class="errorMessage" id="confirmPasswordMessage"></label></td>
+                </tr>
+            </table>
+            <div id="textareaDescription">
+                <label for="description">Description:</label>
+                <textarea rows="10" cols="30" id="description"> </textarea>
+            </div>
+            <div id="submitAddTeam" class="formSubmitAddTeam">
+                <input name="Submit" value="Submit" type="submit" onclick="validate(); return false;"/>
+            </div>
+            <div id="addMore" class="formAddMore">
+                <input name="Submit" value="Add More" type="submit"/>
+            </div>
+        </form>
+    </div>
+            </div>
+           
+        
+        </div>
+        <?php include_once 'footer.php'; ?>
+        </div>
+    </body>
+</html>
